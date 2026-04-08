@@ -74,6 +74,7 @@ body.ch #cring{width:54px;height:54px;border-color:var(--gold)}
 nav{position:fixed;top:0;width:100%;z-index:9000;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3.5rem;transition:all .5s cubic-bezier(.16,1,.3,1)}
 nav.sc{background:rgba(3,3,10,.93);backdrop-filter:blur(24px) saturate(190%);border-bottom:1px solid rgba(255,215,105,.2);padding:.85rem 3.5rem}
 .nlogo{font-family:'Courier New',monospace;font-size:1rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:.6rem;cursor:pointer}
+.nlogo-img{width:174px;height:58px;object-fit:contain;object-position:left center;filter:drop-shadow(0 0 16px rgba(224,185,58,.38)) drop-shadow(0 0 30px rgba(255,215,105,.2))}
 .nmark{width:26px;height:26px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.55rem;animation:spin 20s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .nlinks{display:flex;gap:2.5rem;list-style:none}
@@ -102,6 +103,8 @@ nav.sc{background:rgba(3,3,10,.93);backdrop-filter:blur(24px) saturate(190%);bor
 .hv{position:absolute;top:.05em;right:-.9em;font-family:'Courier New',monospace;font-size:.15em;letter-spacing:.15em;color:var(--gold);-webkit-text-fill-color:var(--gold);filter:none;writing-mode:vertical-rl;opacity:.55}
 .kdiv{margin:2.5rem auto;width:clamp(200px,40vw,420px);height:24px;opacity:0;animation:fu 1s .9s ease forwards}
 .kdiv svg{width:100%;height:100%}
+.hero-logo-wrap{display:flex;justify-content:center;margin:0 auto 1rem;opacity:0;animation:fu 1s .95s ease forwards}
+.hero-logo{width:min(320px,72vw);height:90px;object-fit:contain;filter:drop-shadow(0 0 18px rgba(224,185,58,.34)) drop-shadow(0 0 34px rgba(255,215,105,.2))}
 .htag{font-size:clamp(1.05rem,2.2vw,1.4rem);color:var(--white);font-style:italic;letter-spacing:.06em;line-height:1.65;max-width:560px;margin:0 auto .8rem;opacity:0;animation:fu 1s 1.1s ease forwards}
 .hsub{font-family:'Courier New',monospace;font-size:.76rem;color:#beb59f;letter-spacing:.12em;max-width:420px;margin:0 auto 3rem;opacity:0;animation:fu 1s 1.25s ease forwards}
 .hchips{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;opacity:0;animation:fu 1s 1.4s ease forwards}
@@ -255,6 +258,8 @@ section{position:relative;z-index:2;padding:7rem 3rem}
 footer{background:radial-gradient(900px 300px at 50% -30%, rgba(224,185,58,.16), transparent 68%),var(--deep);border-top:1px solid rgba(255,215,105,.16);padding:5rem 3rem 3rem;text-align:center;position:relative;overflow:hidden}
 .fkint{position:absolute;inset:0;pointer-events:none;opacity:.07}
 .fin{position:relative;z-index:1}
+.flogo-wrap{display:flex;justify-content:center;margin-bottom:1rem}
+.flogo-img{width:min(260px,70vw);height:72px;object-fit:contain;filter:drop-shadow(0 0 16px rgba(224,185,58,.34)) drop-shadow(0 0 30px rgba(255,215,105,.18))}
 .flogo{font-family:'Courier New',monospace;font-size:1.2rem;letter-spacing:.4em;color:var(--gold);margin-bottom:.6rem}
 .ftag{font-style:italic;color:var(--muted);font-size:.88rem;margin-bottom:.8rem}
 .fhost{font-family:'Courier New',monospace;font-size:.68rem;letter-spacing:.25em;color:var(--gold-dim);margin-bottom:3rem}
@@ -312,6 +317,9 @@ footer{background:radial-gradient(900px 300px at 50% -30%, rgba(224,185,58,.16),
   body{cursor:auto}
   #cdot,#cring{display:none}
   .htitle{font-size:clamp(3.5rem,16vw,8rem)}
+  .nlogo-img{width:142px;height:48px}
+  .hero-logo{width:min(250px,78vw);height:72px}
+  .flogo-img{width:min(210px,78vw);height:62px}
   .fdates{gap:1.5rem}
   .evtab{font-size:.64rem;letter-spacing:.11em;padding:.6rem .7rem}
   .evnum{font-size:.54rem}
@@ -351,8 +359,7 @@ footer{background:radial-gradient(900px 300px at 50% -30%, rgba(224,185,58,.16),
 <!-- NAV -->
 <nav id="nav">
   <div class="nlogo">
-    <div class="nmark">◆</div>
-    TECHTONIK 5.0<span style="color:var(--gold-bright)"></span>
+    <img class="nlogo-img" src="school%20logo.png" alt="Suncity School logo">
   </div>
   <ul class="nlinks" id="nlinks">
     <li><a href="#about">About</a></li>
@@ -388,7 +395,10 @@ footer{background:radial-gradient(900px 300px at 50% -30%, rgba(224,185,58,.16),
   </svg>
 
   <div class="hc">
-    <div class="hey">5th Edition &nbsp;·&nbsp; Inter-School Tech Fest &nbsp;·&nbsp; Suncity School</div>
+    <div class="hey">5th Edition &nbsp;·&nbsp; Inter-School Tech Fest &nbsp;·&nbsp; Suncity School Sector 37D</div>
+    <div class="hero-logo-wrap">
+      <img class="hero-logo" src="school%20logo.png" alt="Suncity School logo">
+    </div>
     <h1 class="htitle">
       <span class="w1">TECH</span>
       <span class="w2">TONIK<span class="hv">V.5.0</span></span>
@@ -464,7 +474,7 @@ footer{background:radial-gradient(900px 300px at 50% -30%, rgba(224,185,58,.16),
       <div class="tlnode reveal"><div class="tlorb"></div><div><div class="tldate">20 APRIL 2026</div><div class="tlname">Registration Deadline</div><div class="tlcard"><div class="tldesc">Secure your spot before the portal closes. One event per student.</div></div></div></div>
       <div class="tlnode reveal"><div class="tlorb"></div><div><div class="tldate">1 MAY 2026</div><div class="tlname">Prelims &amp; Online Submissions</div><div class="tlcard"><div class="tldesc">Submit entries digitally. The first filter of brilliance begins.</div></div></div></div>
       <div class="tlnode reveal"><div class="tlorb"></div><div><div class="tldate">8 MAY 2026</div><div class="tlname">Prelims Results</div><div class="tlcard"><div class="tldesc">Qualifiers announced. The gold is separated from the rest.</div></div></div></div>
-      <div class="tlnode reveal"><div class="tlorb"></div><div><div class="tldate">15 MAY 2026</div><div class="tlname">Grand Finale &amp; Results</div><div class="tlcard"><div class="tldesc">On-campus showdown at Suncity School. Champions crowned live.</div></div></div></div>
+      <div class="tlnode reveal"><div class="tlorb"></div><div><div class="tldate">15 MAY 2026</div><div class="tlname">Grand Finale &amp; Results</div><div class="tlcard"><div class="tldesc">On-campus showdown at Suncity School Sector 37D. Champions crowned live.</div></div></div></div>
     </div>
   </div>
 </section>
@@ -506,25 +516,25 @@ footer{background:radial-gradient(900px 300px at 50% -30%, rgba(224,185,58,.16),
     <div class="evpanel active" id="panel-junior">
       <div class="evcard ej">
         <div class="evhd"><div><div class="evnum">EVENT · 01</div><div class="evname" style="color:var(--teal)">Golden Fixers</div></div><div class="evem">🎨</div></div>
-        <div class="evbod"><div class="evpill">⚙ Paint 3D</div><div class="evdesc">Grades III–V: Create an original Paint 3D artwork that transforms a broken real-world situation into a repaired, technology-enabled solution, clearly showing a strong Before → After journey.</div></div>
+        <div class="evbod"><div class="evpill">⚙ Paint 3D</div><div class="evdesc">Grade III: Create an original Paint 3D artwork that transforms a broken real-world situation into a repaired, technology-enabled solution, clearly showing a strong Before → After journey.</div></div>
         <div class="evdet"><div class="evdi"><ul><li>Use Paint 3D as the primary creation tool</li><li>Depict a clearly broken real-world scenario</li><li>Show a compelling Before → After transformation</li><li>No internet images — original artwork only</li></ul></div></div>
         <div class="evft"><span>EXPAND DETAILS</span><span class="evarr">↓</span></div>
       </div>
       <div class="evcard ej">
         <div class="evhd"><div><div class="evnum">EVENT · 02</div><div class="evname" style="color:var(--teal)">Scrap to Smart</div></div><div class="evem">🤖</div></div>
-        <div class="evbod"><div class="evpill">⚙ Bot Builders</div><div class="evdesc">Grades III–V: Build a robot model using waste materials to solve one practical everyday problem, and explain how your design works, why it helps, and what impact it creates.</div></div>
+        <div class="evbod"><div class="evpill">⚙ Bot Builders</div><div class="evdesc">Grades IV–V: Build a robot model using waste materials to solve one practical everyday problem, and explain how your design works, why it helps, and what impact it creates.</div></div>
         <div class="evdet"><div class="evdi"><ul><li>Build using only waste / recycled materials</li><li>Robot must solve a genuine real-life problem</li><li>Clearly explain the problem and your solution</li><li>No electronics or powered components required</li></ul></div></div>
         <div class="evft"><span>EXPAND DETAILS</span><span class="evarr">↓</span></div>
       </div>
       <div class="evcard ej">
         <div class="evhd"><div><div class="evnum">EVENT · 03</div><div class="evname" style="color:var(--teal)">Sonic Rebuild</div></div><div class="evem">🎙️</div></div>
-        <div class="evbod"><div class="evpill">⚙ Podcast &amp; RJ</div><div class="evdesc">Grades III–V: Craft an engaging audio story that moves from Problem → Solution → Future, then present it live in RJ style with clear voice, confidence, and storytelling flow.</div></div>
+        <div class="evbod"><div class="evpill">⚙ Podcast &amp; RJ</div><div class="evdesc">Grade V: Craft an engaging audio story that moves from Problem → Solution → Future, then present it live in RJ style with clear voice, confidence, and storytelling flow.</div></div>
         <div class="evdet"><div class="evdi"><ul><li>Round 1: Submit an original audio story</li><li>Structure: Problem → Solution → Future</li><li>Round 2: Live RJ-style stage presentation</li><li>Evaluated on storytelling, clarity, and confidence</li></ul></div></div>
         <div class="evft"><span>EXPAND DETAILS</span><span class="evarr">↓</span></div>
       </div>
       <div class="evcard ej">
         <div class="evhd"><div><div class="evnum">EVENT · 04</div><div class="evname" style="color:var(--teal)">Code Repair Lab</div></div><div class="evem">🧩</div></div>
-        <div class="evbod"><div class="evpill">⚙ Scratch</div><div class="evdesc">Grades III–V: Use Scratch to identify a weak or broken game concept, fix its logic, and upgrade gameplay so the final version is smoother, smarter, and more fun to play.</div></div>
+        <div class="evbod"><div class="evpill">⚙ Scratch</div><div class="evdesc">Grade V: Use Scratch to identify a weak or broken game concept, fix its logic, and upgrade gameplay so the final version is smoother, smarter, and more fun to play.</div></div>
         <div class="evdet"><div class="evdi"><ul><li>Built on the Scratch platform</li><li>Identify a problem → Fix it → Improve further</li><li>Evaluated on logic quality and gameplay improvements</li></ul></div></div>
         <div class="evft"><span>EXPAND DETAILS</span><span class="evarr">↓</span></div>
       </div>
@@ -534,7 +544,7 @@ footer{background:radial-gradient(900px 300px at 50% -30%, rgba(224,185,58,.16),
     <div class="evpanel" id="panel-middle">
       <div class="evcard em">
         <div class="evhd"><div><div class="evnum">EVENT · 05</div><div class="evname" style="color:var(--amber)">Smart City Reboot</div></div><div class="evem">🏙️</div></div>
-        <div class="evbod"><div class="evpill">⚙ TinkerCAD</div><div class="evdesc">Grades VI–VIII: Design a future-ready smart city in TinkerCAD that addresses real civic challenges through well-planned zones, connected systems, and technology-based solutions.</div></div>
+        <div class="evbod"><div class="evpill">⚙ TinkerCAD</div><div class="evdesc">Grade VII: Design a future-ready smart city in TinkerCAD that addresses real civic challenges through well-planned zones, connected systems, and technology-based solutions.</div></div>
         <div class="evdet"><div class="evdi"><ul><li>Use TinkerCAD for full 3D city design</li><li>Address real-world urban problems with tech</li><li>Include multiple distinct zones</li><li>Present your integrated technology solutions</li></ul></div></div>
         <div class="evft"><span>EXPAND DETAILS</span><span class="evarr">↓</span></div>
       </div>
@@ -546,7 +556,7 @@ footer{background:radial-gradient(900px 300px at 50% -30%, rgba(224,185,58,.16),
       </div>
       <div class="evcard em">
         <div class="evhd"><div><div class="evnum">EVENT · 07</div><div class="evname" style="color:var(--amber)">App Reboot</div></div><div class="evem">📱</div></div>
-        <div class="evbod"><div class="evpill">⚙ Canva / Figma / PowerPoint</div><div class="evdesc">Grades VI–VIII: Reimagine an existing app interface using Canva, Figma, or PowerPoint, focusing on clearer navigation, better usability, and user-first visual improvements.</div></div>
+        <div class="evbod"><div class="evpill">⚙ Canva / Figma / PowerPoint</div><div class="evdesc">Grades VII–VIII: Reimagine an existing app interface using Canva, Figma, or PowerPoint, focusing on clearer navigation, better usability, and user-first visual improvements.</div></div>
         <div class="evdet"><div class="evdi"><ul><li>Use Canva, Figma, or PowerPoint</li><li>Select and redesign an existing app's interface</li><li>Clearly articulate every UX improvement</li></ul></div></div>
         <div class="evft"><span>EXPAND DETAILS</span><span class="evarr">↓</span></div>
       </div>
@@ -562,25 +572,25 @@ footer{background:radial-gradient(900px 300px at 50% -30%, rgba(224,185,58,.16),
     <div class="evpanel" id="panel-senior">
       <div class="evcard es">
         <div class="evhd"><div><div class="evnum">EVENT · 09</div><div class="evname" style="color:var(--rose)">Chrono Rebuild</div></div><div class="evem">⏳</div></div>
-        <div class="evbod"><div class="evpill">⚙ Video Production</div><div class="evdesc">Grades IX–XII: Produce a time-travel themed video that traces how a problem evolved over time and presents a modern technological solution with strong narrative structure.</div></div>
+        <div class="evbod"><div class="evpill">⚙ Video Production</div><div class="evdesc">Grades IX–X: Produce a time-travel themed video that traces how a problem evolved over time and presents a modern technological solution with strong narrative structure.</div></div>
         <div class="evdet"><div class="evdi"><ul><li>Time-travel narrative format required</li><li>Show problem evolution across historical eras</li><li>Present a compelling modern technological solution</li></ul></div></div>
         <div class="evft"><span>EXPAND DETAILS</span><span class="evarr">↓</span></div>
       </div>
       <div class="evcard es">
         <div class="evhd"><div><div class="evnum">EVENT · 10</div><div class="evname" style="color:var(--rose)">Nature Reframed</div></div><div class="evem">🌿</div></div>
-        <div class="evbod"><div class="evpill">⚙ Photography Challenge</div><div class="evdesc">Grades IX–XII: Capture a compelling photograph that highlights an environmental problem and a hopeful path to restoration, using framing, light, and visual storytelling to communicate impact.</div></div>
+        <div class="evbod"><div class="evpill">⚙ Photography Challenge</div><div class="evdesc">Grades IX–X: Capture a compelling photograph that highlights an environmental problem and a hopeful path to restoration, using framing, light, and visual storytelling to communicate impact.</div></div>
         <div class="evdet"><div class="evdi"><ul><li>Focus on sustainability and environmental impact</li><li>Propose concrete technological innovations</li><li>Must align with UN Sustainable Development Goals</li></ul></div></div>
         <div class="evft"><span>EXPAND DETAILS</span><span class="evarr">↓</span></div>
       </div>
       <div class="evcard es">
         <div class="evhd"><div><div class="evnum">EVENT · 11</div><div class="evname" style="color:var(--rose)">Web Reboot</div></div><div class="evem">💻</div></div>
-        <div class="evbod"><div class="evpill">⚙ Web Design / Development</div><div class="evdesc">Grades IX–XII: Design and develop a purpose-driven website that solves a real-world problem through thoughtful UI/UX, solid implementation, and clear user value.</div></div>
+        <div class="evbod"><div class="evpill">⚙ Web Design / Development</div><div class="evdesc">Grades XI–XII: Design and develop a purpose-driven website that solves a real-world problem through thoughtful UI/UX, solid implementation, and clear user value.</div></div>
         <div class="evdet"><div class="evdi"><ul><li>Full web design and/or development challenge</li><li>Must clearly address a real-world problem</li><li>Judged on design quality, code, and real-world impact</li></ul></div></div>
         <div class="evft"><span>EXPAND DETAILS</span><span class="evarr">↓</span></div>
       </div>
       <div class="evcard es">
         <div class="evhd"><div><div class="evnum">EVENT · 12</div><div class="evname" style="color:var(--rose)">Colony Reborn</div></div><div class="evem">🌍</div></div>
-        <div class="evbod"><div class="evpill">⚙ Futurism &amp; Design</div><div class="evdesc">Grades IX–XII: Imagine and present a future society rebuilt through technology, covering how people live, govern, learn, and sustain resources in a scalable model.</div></div>
+        <div class="evbod"><div class="evpill">⚙ Futurism &amp; Design</div><div class="evdesc">Grades XI–XII: Imagine and present a future society rebuilt through technology, covering how people live, govern, learn, and sustain resources in a scalable model.</div></div>
         <div class="evdet"><div class="evdi"><ul><li>Envision a future society rebuilt by technology</li><li>Present a comprehensive model or proposal</li><li>Address governance, sustainability, and innovation</li></ul></div></div>
         <div class="evft"><span>EXPAND DETAILS</span><span class="evarr">↓</span></div>
       </div>
@@ -650,16 +660,18 @@ footer{background:radial-gradient(900px 300px at 50% -30%, rgba(224,185,58,.16),
     </g>
   </svg>
   <div class="fin">
+    <div class="flogo-wrap">
+      <img class="flogo-img" src="school%20logo.png" alt="Suncity School logo">
+    </div>
     <div class="flogo">◆ TECHTONIK 5.0 ◆</div>
     <div class="ftag">"Broken to Brilliant: Rebuilding Through Technology"</div>
-    <div class="fhost">Hosted by Suncity School, Gurugram</div>
+    <div class="fhost">Hosted by Suncity School Sector 37D, Gurugram</div>
     <div class="fdates">
       <div class="fdate"><div class="fdl">Registration</div><div class="fdv">20 April 2026</div></div>
       <div class="fdate"><div class="fdl">Prelims</div><div class="fdv">1 May 2026</div></div>
       <div class="fdate"><div class="fdl">Results</div><div class="fdv">8 May 2026</div></div>
       <div class="fdate"><div class="fdl">Grand Finale</div><div class="fdv">15 May 2026</div></div>
     </div>
-    <div class="fbot">© 2026 TECHTONIK 5.0 · Suncity School, Gurugram · All Rights Reserved<br><span style="opacity:.4">Digital Kintsugi — Where Technology Heals What's Broken</span></div>
   </div>
 </footer>
 
