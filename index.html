@@ -369,7 +369,12 @@ footer{background:radial-gradient(900px 300px at 50% -30%, rgba(224,185,58,.16),
     <li><a href="#criteria">Criteria</a></li>
     <li><a href="#gallery">Gallery</a></li>
   </ul>
-  <button class="ncta">Register Now</button>
+  <a href="https://forms.gle/Dq4LRpAt4pmnfQGJA"
+   class="ncta"
+   target="_blank"
+   rel="noopener noreferrer">
+   Register Now
+</a>
   <div class="hbg" id="hbg">
     <span></span><span></span><span></span>
   </div>
@@ -817,7 +822,6 @@ document.querySelectorAll('.nlinks a').forEach(a=>{
 
 /* ── NAV BRAND/CTA ACTIONS ── */
 document.querySelector('.nlogo')?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-document.querySelector('.ncta')?.addEventListener('click',()=>document.getElementById('timeline')?.scrollIntoView({behavior:'smooth'}));
 
 /* ── INTERSECTION OBSERVER ── */
 const obs=new IntersectionObserver(entries=>{
